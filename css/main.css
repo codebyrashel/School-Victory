@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+}
+.nav-menu ul{
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    padding: 0;
+}
+.nav-menu ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.row {
+    display: flex; 
+    justify-content: space-between; /* Align left and right */
+    align-items: center; /* Align vertically */
+}
+
+.col-md-left {
+    max-width: 50%; /* Prevents it from taking full width */
+    padding-left: 15vh;
+}
+
+.col-md-right {
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    position: relative;
+}
+
+.hero-cover img {
+    max-width: 100%;
+    height: auto;
+}
+.col-md-left h5{
+    color: #96BB7C;
+    padding-bottom: 25px;
+    font-size: 1.1rem;
+}
+.col-md-left h1{
+    font-size: 4.5rem;
+    padding-bottom: 30px;
+}
+.col-md-left p{
+    padding-bottom: 20px;
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.cta{
+    display: flex;
+    gap: 1rem;
+}
+.cta button{
+    text-decoration: none;
+    background-color: #96BB7C;
+    outline: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    border: none;
+}
+.cta button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.cta button:nth-child(2){
+    background-color: white;
+    border: 1px solid #96BB7C;
+    
+    & a{
+        color: #96BB7C;
+    }
+}
+
+/* Make the advice section bigger */
+.advice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; /* Prevents it from stretching too much */
+    padding: 5rem 2rem; /* Increased padding to make it bigger */
+    margin: 0 auto; /* Centers it properly */
+}
+
+/* Adjust row-1 to align properly with row-2 */
+.row-1 {
+    text-align: left; /* Align text to center */
+    max-width: 800px; /* Make the heading area wider */
+    margin: 0 auto 3rem; /* Center it and add more bottom margin */
+    margin-left: 7%;
+}
+
+/* Style for "Practice Advice" heading */
+.row-1 h4 {
+    color: #6ca44c; /* Green color */
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for "Our Popular Courses" title */
+.row-1 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.8rem;
+}
+
+/* Style for the paragraph */
+.row-1 p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Style for the card container */
+.row-2 {
+    display: flex;
+    justify-content: center; /* Centered layout */
+    gap: 1.5rem; /* Space between cards */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    width: 100%; /* Prevent stretching */
+}
+
+/* Style each card */
+/* Style each card */
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 230px;
+    height: 250px; /* Taller cards */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for all cards */
+.card:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    background-color: #f0f0f0; /* Slightly grayish background on hover */
+}
+
+/* Style for the image */
+.card img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Align the <strong> tag and add a divider below */
+.card strong {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Add a divider line under the <strong> tag */
+.card strong::after {
+    content: "";
+    display: block;
+    width: 50%; /* Full width */
+    height: 2px;
+    background-color: #ff0000;  /* Default red divider */
+    margin-top: 5px;
+}
+
+/* Align the paragraph properly under the divider */
+.card p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+/* Style for the active card */
+#active {
+    background-color: #96BB7C;
+    color: white; /* This should work for most text, but we'll make it more specific for nested elements */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Apply white text color to inner text elements for certainty */
+#active strong, 
+#active p {
+    color: white;
+}
+
+/* Change divider color to white on the active card */
+#active strong::after {
+    background-color: white; /* Change to white */
+}
+
+/* Hover effect for the active card */
+#active:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+    background-color: #82a96b; /* Slightly darker background on hover */
+}
