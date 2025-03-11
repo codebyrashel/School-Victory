@@ -736,7 +736,7 @@ p {
     margin: 10px 0;
     font-size: 14px;
 }
-button {
+.price-btn {
     display: block;
     background: #81C784;
     color: white;
