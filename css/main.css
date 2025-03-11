@@ -561,203 +561,159 @@
 }
 /* -----------Course Section End----------------*/
 
+.price-container {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center; /* Centers the text inside */
+    margin: 0 auto; /* Centers the section */
+    padding-top: 5%;
+}
+.price-header {
+    /* margin-bottom: 30px; */
+    text-align: left;
+    margin: 2rem 2.5rem;
+}
 
-/* .price {
-    padding: 50px 20px;
-}
-.price-header span {
-    color: #8fc53d;
+.price-container span {
+    color: #96BB7C;
     font-weight: bold;
+    display: block; /* Ensures it takes full width */
+    margin-bottom: 10px; /* Space below */
 }
-.price-header h2 {
+
+.price-container h2 {
     font-size: 28px;
-    font-weight: bold;
-    color: #222;
+    color: #2a2a2a;
+    margin-bottom: 10px; /* Space below */
 }
-.price-header p {
-    color: gray;
-    font-size: 14px;
-    max-width: 600px;
-    margin: auto;
+
+.price-desc{
+    color: #666;
+    margin-left: -3rem;
+    margin-bottom: 4rem;
 }
+
 .price-cards {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center; /* This will align the cards to the left */
+    gap: 5.5rem; /* Optional: Try adjusting this value for finer control */
 }
-.card {
-    background: #fff;
-    padding: 30px;
-    width: 320px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    text-align: left;
-}
-.card.new {
-    background: #1c2b3a;
-    color: #fff;
-}
-.card.new .badge {
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    background: #f77f00;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-}
-.card .icon {
-    font-size: 40px;
-    color: #8fc53d;
-    text-align: center;
-    display: block;
-}
-.card h3 {
-    font-size: 22px;
-    text-align: center;
-}
-.card p {
-    font-size: 14px;
-    color: gray;
-    text-align: center;
-}
-.card.new p {
-    color: #ddd;
-}
-.card .price-tag {
-    font-size: 24px;
-    font-weight: bold;
-    color: #27ae60;
-    text-align: center;
-    margin: 10px 0;
-}
-.card.new .price-tag {
-    color: #2ecc71;
-}
-.card button {
-    background: #27ae60;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px auto;
-    display: block;
-    width: 100%;
-}
-.card ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-.card ul li {
-    padding: 8px 0;
-    color: #555;
-    display: flex;
-    align-items: center;
-}
-.card ul li::before {
-    content: '✔';
-    color: #27ae60;
-    font-weight: bold;
-    margin-right: 10px;
-}
-.card.new ul li {
-    color: #ddd;
-} */
 
-.price-card {
-    display: flex;
-    flex-direction: column;
-    align-items:center; /* Center all elements inside the .price-card */
-    text-align: center;
-}
 .price-card, .price-card-new {
     width: 280px;
+    min-height: 700px;  /* Set the minimum height */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     background: white;
-}
-.price-card-new {
-    background: #1E2A3A;
-    color: white;
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all elements inside the .price-card */
-    text-align: center;
+    align-items: center;
+    margin: 5px;  /* Reduce margin here to make cards closer */
 }
+
+
+.price-card-new {
+    background: #2D4059;
+    color: white;
+    position: relative;
+}
+
 .badge {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: orange;
+    top: -30px; /* Move it outside the top */
+    right: -25px; /* Move it outside the right */
+    background: #E77C40;
     color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 10px 15px; /* Increased padding for better look */
+    border-radius: 50%;
     font-size: 14px;
+    border: 2px solid #fff; /* Optional border */
+    width: 80px; /* Set a fixed width */
+    height: 80px; /* Set a fixed height */
+    display: flex; /* Center the icon */
+    justify-content: center; /* Align horizontally */
+    align-items: center; /* Align vertically */
 }
-/* Circle icon */
 .icon {
     font-size: 24px;
     color: #fff;
     margin-bottom: 10px;
-    background-color: #4CAF50;
+    background-color: #96BB7C;
     border-radius: 50%;
-    width: 50px;  /* Set a specific width */
-    height: 50px; /* Set a specific height */
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Horizontally center the icon */
-    align-items: center; /* Vertically center the icon */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon i {
-    font-size: 24px; /* Adjust icon size if needed */
+    font-size: 24px;
 }
+
 h3 {
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
 .price-tag {
     font-size: 24px;
     font-weight: bold;
     color: #4CAF50;
 }
+
 .price-tag small {
     font-size: 14px;
-    color: gray;
+    color: #8EC2F2;
     display: block;
 }
+
 p {
     margin: 10px 0;
     font-size: 14px;
+    padding: 1rem 3rem;
 }
+
+.slate{
+    margin-left: -20px;
+    margin-right: -20px;
+    /* margin-bottom: 2px; */
+}
+.price-tag p{
+    padding: 1rem;
+}
+
 .price-btn {
     display: block;
     background: #81C784;
     color: white;
-    padding: 10px;
+    padding: 10px 80px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     margin: 10px auto;
 }
+
 ul {
     list-style: none;
     text-align: left;
     padding: 0;
+    margin-top: 20px;
 }
+
 li {
     display: flex;
     align-items: center;
     margin: 5px 0;
     font-size: 14px;
 }
+
 li i {
     margin-right: 10px;
-    color: green;
+    color: #2DC071;
+    padding: 10px;
+    font-size: 1.5rem;
 }
