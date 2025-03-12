@@ -4,28 +4,63 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.nav-menu{
+.nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem;
 }
-.nav-menu ul{
+
+.nav-menu ul {
     display: flex;
     gap: 1.2rem;
     list-style: none;
     padding: 0;
 }
-.nav-menu ul a{
+
+.nav-menu ul a {
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: color 0.3s ease; /* Only transition color */
 }
-.btn a{
+
+.nav-menu ul a:hover {
+    color: #7FA86C; /* Change color on hover */
+    /* No transform effect, so no growing or scaling will occur */
+}
+
+.btn-container a {
     text-decoration: none;
     color: black;
     font-weight: 550;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition */
+    padding: 15px 25px; /* Ensure consistent padding to avoid grow effect */
+    border-radius: 8px;
 }
+
+.btn-container a:nth-child(2) {
+    background-color: #7FA86C;
+    color: #fff;
+    margin-left: 20px;
+    margin-right: 20vh;
+}
+
+.btn-container a i {
+    padding-left: 8px;
+}
+
+.btn-container a:hover {
+    color: #77c93c; 
+    /* Removed background-color change to avoid unnecessary hover effect */
+}
+
+.btn-container a:nth-child(2):hover {
+    background-color: transparent; /* Maintain transparent background on hover */
+    border: 1px solid #7FA86C; /* Border appears on hover for the second button */
+    color: #7FA86C; /* Keep the text color consistent with the border */
+}
+
 
 .container-fluid {
     padding: 20px;
@@ -359,68 +394,66 @@
     /* margin-left: 8rem; */
 }
 /*------------Package Section End-------*/
-/* -----------Course Section start----------------*/
-.course {
+/* ----------- Unique Course Section Start ----------------*/
+.unique-course {
     max-width: 1100px;
     width: 100%;
-    text-align: center; /* Centers the text inside */
-    margin: 0 auto; /* Centers the section */
+    text-align: center;
+    margin: 0 auto;
     padding-top: 5%;
 }
-.row-up {
-    /* margin-bottom: 30px; */
+
+.unique-course-header {
     text-align: left;
     margin: 2rem 2.5rem;
 }
 
-.row-up span {
+.unique-course-header span {
     color: green;
     font-weight: bold;
-    display: block; /* Ensures it takes full width */
-    margin-bottom: 10px; /* Space below */
+    display: block;
+    margin-bottom: 10px;
 }
 
-.row-up h2 {
+.unique-course-header h2 {
     font-size: 28px;
     color: #2a2a2a;
-    margin-bottom: 10px; /* Space below */
+    margin-bottom: 10px;
 }
 
-.row-up p {
+.unique-course-header p {
     color: #666;
-    max-width: 450px; /* Limits width to force wrapping */
-    line-height: 1.5; /* Improves readability */
-    margin-bottom: 20px; /* Adds space below */
+    max-width: 450px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-/* Row Down (Course Cards) */
-.row-down {
+.unique-course-list {
     display: flex;
-    justify-content: center; /* Centers the product cards */
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.product {
+.unique-course-card {
     background: white;
     padding: 15px;
     border-radius: 10px;
     width: 250px;
-    text-align: left; /* Ensures text inside cards stays left-aligned */
+    text-align: left;
 }
 
-
-.product-img {
+.unique-course-image {
     position: relative;
     width: 100%;
 }
 
-.product-img img {
+.unique-course-image img {
     width: 100%;
     border-radius: 10px;
 }
 
-.rating {
+.unique-course-rating {
     display: inline-flex;
     align-items: center;
     background: black;
@@ -432,20 +465,17 @@
     margin-left: 8px;
 }
 
-.star-icon {
+.unique-course-star {
     color: gold;
     margin-right: 5px;
     font-size: 12px;
 }
 
-.rating-number {
+.unique-course-rating-number {
     font-size: 12px;
 }
 
-
-
-/* Sale Badge */
-.sale {
+.unique-course-sale-badge {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -456,8 +486,7 @@
     font-size: 12px;
 }
 
-/* Icons (Heart, Cart, Eye) */
-.icons {
+.unique-course-icons {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -465,27 +494,31 @@
     gap: 8px;
 }
 
-.icons i {
+.unique-course-icons i {
     background: white;
     padding: 8px;
     border-radius: 50%;
     font-size: 14px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Course Category */
-.course-category {
+.unique-course-icons i:hover {
+    background: #6ca44c;
+    color: white;
+    transform: scale(1.1);
+}
+
+.unique-course-category {
     display: block;
     margin: 10px 0;
     color: green;
     font-size: 14px;
     font-weight: bold;
-    /* padding-bottom: 5%; */
 }
 
-/* Price & Sales */
-.sales {
+.unique-course-sales {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -494,23 +527,22 @@
     margin-top: 5%;
 }
 
-.price {
+.unique-course-price {
     margin: 10px 0;
 }
 
-.old-price {
+.unique-course-old-price {
     text-decoration: line-through;
     color: #999;
 }
 
-.new-price {
+.unique-course-new-price {
     color: red;
     font-weight: bold;
     margin-left: 5px;
 }
 
-/* Button */
-.learn-more {
+.unique-course-btn {
     background: transparent;
     color: #6ca44c;
     padding: 10px;
@@ -523,86 +555,75 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-.learn-more img {
+.unique-course-btn img {
     width: 12px;
 }
 
-.product-title, .product-desc{
-    padding-top: 10px;
-}
-
-.product-desc{
-    color: #666
-}
-
-/* Hover Effects for Icons */
-.icons i {
-    transition: all 0.3s ease-in-out;
-}
-
-.icons i:hover {
-    background: #6ca44c; /* Green background on hover */
-    color: white;
-    transform: scale(1.1);
-}
-
-/* Hover Effect for Learn More Button */
-.learn-more {
-    transition: all 0.3s ease-in-out;
-}
-
-.learn-more:hover {
+.unique-course-btn:hover {
     background: #6ca44c;
     color: white;
     border: 1px solid #6ca44c;
     transform: scale(1.05);
 }
-/* -----------Course Section End----------------*/
 
-.price-container {
+.unique-course-title, .unique-course-desc {
+    padding-top: 10px;
+}
+
+.unique-course-desc {
+    color: #666;
+}
+
+/* ----------- Unique Course Section End ----------------*/
+/* ----------- pricing Section Start ----------------*/
+.pricing {
     max-width: 1100px;
     width: 100%;
-    text-align: center; /* Centers the text inside */
-    margin: 0 auto; /* Centers the section */
+    text-align: center;
+    margin: 0 auto;
     padding-top: 5%;
 }
-.price-header {
-    /* margin-bottom: 30px; */
+
+.pricing-header {
     text-align: left;
     margin: 2rem 2.5rem;
 }
 
-.price-container span {
+.pricing-header span {
     color: #96BB7C;
     font-weight: bold;
-    display: block; /* Ensures it takes full width */
-    margin-bottom: 10px; /* Space below */
+    display: block;
+    margin-bottom: 15px; /* Increased space */
 }
 
-.price-container h2 {
+.pricing-header h2 {
     font-size: 28px;
     color: #2a2a2a;
-    margin-bottom: 10px; /* Space below */
+    margin-bottom: 15px; /* Increased space */
 }
 
-.price-desc{
+.section-description {
     color: #666;
-    margin-left: -3rem;
-    margin-bottom: 4rem;
+    font-size: 14px;
+    margin-top: 15px; /* Increased space */
+    max-width: 400px; /* Adjust to fit two lines */
+    line-height: 1.5; /* Improve readability */
 }
 
-.price-cards {
+
+.pricing-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* This will align the cards to the left */
-    gap: 5.5rem; /* Optional: Try adjusting this value for finer control */
+    justify-content: center;
+    gap: 5.5rem;
 }
 
-.price-card, .price-card-new {
+.pricing-card {
     width: 280px;
-    min-height: 700px;  /* Set the minimum height */
+    min-height: 700px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -611,11 +632,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px;  /* Reduce margin here to make cards closer */
+    margin: 5px;
 }
 
-
-.price-card-new {
+.highlighted {
     background: #2D4059;
     color: white;
     position: relative;
@@ -623,21 +643,22 @@
 
 .badge {
     position: absolute;
-    top: -30px; /* Move it outside the top */
-    right: -25px; /* Move it outside the right */
+    top: -30px;
+    right: -25px;
     background: #E77C40;
     color: white;
-    padding: 10px 15px; /* Increased padding for better look */
+    padding: 10px 15px;
     border-radius: 50%;
     font-size: 14px;
-    border: 2px solid #fff; /* Optional border */
-    width: 80px; /* Set a fixed width */
-    height: 80px; /* Set a fixed height */
-    display: flex; /* Center the icon */
-    justify-content: center; /* Align horizontally */
-    align-items: center; /* Align vertically */
+    border: 2px solid #fff;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.icon {
+
+.card-icon {
     font-size: 24px;
     color: #fff;
     margin-bottom: 10px;
@@ -650,7 +671,7 @@
     align-items: center;
 }
 
-.icon i {
+.card-icon i {
     font-size: 24px;
 }
 
@@ -659,34 +680,27 @@ h3 {
     margin-bottom: 15px;
 }
 
-.price-tag {
+.price {
     font-size: 24px;
     font-weight: bold;
     color: #4CAF50;
 }
 
-.price-tag small {
+.price small {
     font-size: 14px;
     color: #8EC2F2;
     display: block;
 }
 
-p {
-    margin: 10px 0;
-    font-size: 14px;
-    padding: 1rem 3rem;
+.card-description {
+    margin: 20px;
 }
 
-.slate{
-    margin-left: -20px;
-    margin-right: -20px;
-    /* margin-bottom: 2px; */
-}
-.price-tag p{
-    padding: 1rem;
+.card-subtitle {
+    margin: 20px 40px;
 }
 
-.price-btn {
+.btn-primary {
     display: block;
     background: #81C784;
     color: white;
@@ -697,23 +711,316 @@ p {
     margin: 10px auto;
 }
 
-ul {
+.features-list {
     list-style: none;
     text-align: left;
     padding: 0;
     margin-top: 20px;
 }
 
-li {
+.features-list li {
     display: flex;
     align-items: center;
     margin: 5px 0;
     font-size: 14px;
 }
 
-li i {
+.features-list li i {
     margin-right: 10px;
     color: #2DC071;
     padding: 10px;
     font-size: 1.5rem;
+}
+
+
+/* ----------- pricing Section End ----------------*/
+/* ----------- Testimony Section Start ----------------*/
+
+.testimony {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.testimony-header {
+    text-align: left;
+    margin: 2rem 2.5rem;
+}
+
+.testimony-header-title {
+    color: #96BB7C;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px; /* Increased space */
+}
+
+.testimony-header h2 {
+    font-size: 28px;
+    color: #2a2a2a;
+    margin-bottom: 15px; /* Increased space */
+}
+
+.testimony-description {
+    color: #666;
+    font-size: 14px;
+    margin-top: 15px; /* Increased space */
+    max-width: 400px; /* Adjust to fit two lines */
+    line-height: 1.5; /* Improve readability */
+}
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two reviews per row */
+    gap: 30px; /* Increased spacing */
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review {
+    background: #fff;
+    padding: 35px; /* Increased padding */
+    text-align: center;
+    max-width: 400px; /* Increased size */
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.review img {
+    width: 100px; /* Bigger image */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review p {
+    color: gray; /* Set all p elements to gray */
+    font-size: 16px; /* Slightly bigger */
+    line-height: 1.5;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 22px; /* Slightly bigger stars */
+    margin: 10px 0;
+}
+
+.review h4 {
+    margin: 10px 0 5px;
+    font-size: 20px; /* Bigger name font */
+    font-weight: bold;
+}
+
+.review .role {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Responsive: Stack reviews on smaller screens */
+@media (max-width: 768px) {
+    .reviews-container {
+        grid-template-columns: 1fr; /* One review per row */
+    }
+}
+
+/* ----------- Testimony Section End ----------------*/
+
+/* ----------- Newsletter Section Start ----------------*/
+.newsletter {
+    background-color: #FFF5F5; /* Light pink background */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+.newsletter-tag {
+    color: #96BB7C; /* Green text */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    color: #2a2a2a; /* Dark text */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.newsletter-description {
+    color: #666; /* Gray text */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}
+
+.newsletter-form input {
+    width: 75%; /* Increased width */
+    padding: 14px; /* Slightly larger input field */
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    background: #FAFAFA;
+}
+
+.newsletter-form button {
+    background-color: #96BB7C; /* Green button */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #7FA86C; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+/* ----------- Newsletter Section Start ----------------*/
+/* ----------- Footer Section Start ----------------*/
+/* Footer Section */
+.footer {
+    background-color: #F8F9FA; /* Light gray background */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2A2A2A;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #96BB7C; /* Green hover color */
+}
+
+/* Contact Info */
+.contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.contact ul li i {
+    color: #96BB7C; /* Green icon */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #E0E0E0;
+    /* background-color: #eeeeee; */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Social Icons */
+.social-icons a {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #96BB7C; /* Green color */
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #7FA86C; /* Darker green */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
